@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f3;
+  --foreground: #111111;
+
+  /* ================= MAIN COLORS ================= */
+  --saffron: #c8862f;
+  --saffron-light: #dfb06f;
+  --saffron-dark: #a56a22;
+
+  --forest-green: #0f3f2f;
+  --green-light: #1a5b43;
+  --green-soft: #2b7d5d;
+
+  --cream: #faf8f3;
+  --cream-dark: #efe7d8;
+  --cream-header: #eee9dd;
+
+  --brown: #5c3b1e;
+  --brown-light: #8b5e34;
+
+  --white: #ffffff;
+  --black: #111111;
+  --gray: #6b7280;
+
+  /* ================= PREMIUM BACKGROUNDS ================= */
+  --bg-main: #faf8f3;
+  --bg-section: #f4efe4;
+  --bg-dark: #0a221b;
+  --bg-card: #102d23;
+
+  /* ================= TEXT ================= */
+  --text-main: #111111;
+  --text-light: #ffffff;
+  --text-soft: #6b7280;
+
+  /* ================= GRADIENTS ================= */
+  --gradient-primary: linear-gradient(135deg, #0f3f2f 0%, #1a5b43 100%);
+  --gradient-saffron: linear-gradient(135deg, #c8862f 0%, #dfb06f 100%);
+  --gradient-dark: linear-gradient(135deg, #0a221b 0%, #0f3f2f 100%);
+
+  /* ================= SHADOWS ================= */
+  --shadow-green: 0 20px 50px rgba(15, 63, 47, 0.28);
+  --shadow-orange: 0 20px 50px rgba(200, 134, 47, 0.28);
+  --shadow-dark: 0 25px 80px rgba(0, 0, 0, 0.2);
+
+  /* ================= GLASS EFFECT ================= */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+
+  /* ================= BLUR ================= */
+  --blur-orange: rgba(200, 134, 47, 0.22);
+  --blur-green: rgba(15, 63, 47, 0.22);
+
+  /* Backward-compatible aliases used in components */
+  --color-primary: var(--forest-green);
+  --color-primary-dark: var(--green-light);
+  --color-accent: var(--saffron);
+  --color-accent-hover: var(--saffron-dark);
+  --color-heading: var(--text-main);
+  --color-text-title: #222222;
+  --color-header-bg: var(--cream-header);
+  --color-footer-bg: var(--bg-dark);
+  --color-footer-card: var(--bg-card);
+  --color-footer-bottom: var(--forest-green);
+  --color-logo-border: var(--green-light);
+
+  --color-surface: var(--white);
+  --color-surface-muted: var(--bg-section);
+  --color-border: rgba(15, 63, 47, 0.14);
+  --color-ring: rgba(200, 134, 47, 0.34);
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-lift: var(--shadow-dark);
+  --grad-primary: var(--gradient-primary);
+  --grad-accent: var(--gradient-saffron);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.card-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  background: var(--color-surface);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-premium {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 22px 55px rgba(2, 23, 22, 0.25);
+}
+
+.btn-premium:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 6px var(--color-ring), 0 22px 55px rgba(2, 23, 22, 0.25);
+}
+
+.primary-btn {
+  background: var(--saffron);
+  color: var(--white);
+  border-radius: 999px;
+  box-shadow: var(--shadow-orange);
+  transition: 0.4s;
+}
+
+.primary-btn:hover {
+  background: var(--saffron-dark);
+  transform: translateY(-5px);
+}
+
+.green-section {
+  background: var(--gradient-primary);
+}
+
+.orange-gradient {
+  background: var(--gradient-saffron);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}

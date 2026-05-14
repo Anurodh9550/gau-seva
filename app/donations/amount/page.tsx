@@ -1,0 +1,109 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useLocale } from "@/components/LocaleProvider";
+
+export default function DonationAmountPage() {
+  const router = useRouter();
+  const { t } = useLocale();
+  const [selectedAmount, setSelectedAmount] = useState("500");
+  const openLoginModal = () => {
+    window.dispatchEvent(new Event("open-auth-register"));
+  };
+
+  return (
+    <main className="bg-[#f5f5f5] px-6 py-10">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 overflow-hidden border border-[#ded7ca] bg-[#f8f8f8] shadow-[0_12px_30px_rgba(0,0,0,0.1)] lg:grid-cols-2">
+        <div className="p-6 md:p-8">
+          <p className="text-sm md:text-base leading-8 text-[#575757]">{t("don.amtIntroP")}</p>
+          <p className="mt-5 text-base font-semibold text-[#555]">{t("don.amtTax")}</p>
+
+          <div className="mt-8">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center flex-1">
+                <span className="h-6 w-6 rounded-full bg-[#2f2f2f] text-white text-xs font-bold flex items-center justify-center">
+                  1
+                </span>
+                <div className="h-1 flex-1 bg-[#2ac18b]"></div>
+              </div>
+              <div className="flex items-center flex-1">
+                <span className="h-6 w-6 rounded-full bg-[#2ac18b] text-white text-xs font-bold flex items-center justify-center">
+                  2
+                </span>
+                <div className="h-1 flex-1 bg-[#2ac18b]"></div>
+              </div>
+              <span className="h-6 w-6 rounded-full bg-[#2ac18b] text-white text-xs font-bold flex items-center justify-center">
+                3
+              </span>
+            </div>
+            <div className="mt-2 grid grid-cols-3 text-center text-sm text-[#555]">
+              <span>{t("don.flowAmount")}</span>
+              <span>{t("don.flowDetails")}</span>
+              <span>{t("don.flowPayment")}</span>
+            </div>
+          </div>
+
+          <div className="mt-5 rounded-sm bg-[#0f7f72] px-4 py-2 text-sm text-white">
+            {t("don.amtReturning")}{" "}
+            <button onClick={openLoginModal} className="underline underline-offset-2">
+              Click here to login
+            </button>
+          </div>
+
+          <p className="mt-4 text-lg font-semibold text-[#2e2e2e]">{t("don.chooseAmount")}</p>
+          <div className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-3">
+            {["500", "1500", "2000", "5000", "10000", "50000", "other"].map((amount) => (
+              <label
+                key={amount}
+                className="flex items-center gap-2 border border-[#d4d4d4] bg-white px-3 py-2 text-sm text-[#2a2a2a]"
+              >
+                <input
+                  type="radio"
+                  name="amount"
+                  checked={selectedAmount === amount}
+                  onChange={() => setSelectedAmount(amount)}
+                />
+                {amount === "other" ? t("don.otherAmount") : `Rs.${Number(amount).toLocaleString("en-IN")}.00`}
+              </label>
+            ))}
+          </div>
+
+          <Link
+            href="/donations/details"
+            className="mt-6 inline-block bg-[#f8b400] hover:bg-[#df9f00] text-white px-8 py-3 rounded-full text-sm font-bold transition"
+          >
+            Next »
+          </Link>
+        </div>
+
+        <div className="bg-[#ead9bc]">
+          <Image
+            src="/cow2.jpg"
+            alt="donation"
+            width={900}
+            height={780}
+            className="w-full h-[360px] md:h-[420px] object-cover"
+          />
+          <div className="px-8 py-6">
+            <h3 className="text-[#3f2b1a] text-5xl md:text-6xl font-extrabold leading-none">{t("don.sideDonation")}</h3>
+            <p className="mt-2 text-[#3f2b1a] text-3xl md:text-4xl font-extrabold uppercase">{t("don.sideFor")}</p>
+            <div className="mt-5 flex justify-center">
+              <div className="h-24 w-24 rounded-full border-4 border-[#5c4430] flex items-center justify-center text-4xl text-[#5c4430]">
+                🐄
+              </div>
+            </div>
+            <button
+              onClick={() => router.push("/donations/payment")}
+              className="mt-5 w-full rounded-xl bg-[#4e3625] py-4 text-4xl font-extrabold tracking-wide text-white"
+            >
+              DONATE NOW
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
