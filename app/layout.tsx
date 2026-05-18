@@ -27,6 +27,21 @@ export const metadata: Metadata = {
     "Donations",
     "Rashtriya Gau Seva Sangh",
   ],
+   icons: {
+    icon: "/gulogo.png",
+  },
+
+  openGraph: {
+    title: "Rashtriya Gau Seva Sangh",
+    description: "Official website of Rashtriya Gau Seva Sangh",
+    images: [
+      {
+        url: "/gulogo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
