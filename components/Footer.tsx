@@ -143,8 +143,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-sm text-white"
         >
-          © Copyright 2026 Rashtriya Gau Sewa Gausala Sangh, All Rights Reserved. Designed and
-          Developed By <span className="font-bold text-[var(--color-accent)]">DataboxStudio.</span>
+         
         </motion.p>
       </div>
     </footer>
