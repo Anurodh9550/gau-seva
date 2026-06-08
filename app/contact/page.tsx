@@ -173,7 +173,7 @@ export default function ContactPage() {
                   </h3>
 
                   <p className="text-gray-600 mt-2">
-                    +91 9211472800
+                    +91 9919161119
                   </p>
                 </div>
               </div>
