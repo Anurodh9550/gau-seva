@@ -35,24 +35,6 @@ const nextConfig: NextConfig = {
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/about", destination: "/About", permanent: true },
       { source: "/about-us", destination: "/About", permanent: true },
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.gausevasangh.org" }],
-        destination: "https://gausevasangh.org/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.gauvsevasangh.org" }],
-        destination: "https://gausevasangh.org/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "gauvsevasangh.org" }],
-        destination: "https://gausevasangh.org/:path*",
-        permanent: true,
-      },
     ];
   },
 };
