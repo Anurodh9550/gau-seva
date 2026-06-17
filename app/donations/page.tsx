@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
@@ -294,7 +294,7 @@ export default function DonationPage() {
             </div>
 
             <div className="bg-[#ead9bc]">
-              <Image
+              <SafeImage
                 src="/cow2.jpg"
                 alt="donation"
                 width={900}
@@ -339,7 +339,7 @@ export default function DonationPage() {
             {/* ================= LEFT IMAGE ================= */}
             <div className="relative">
 
-              <Image
+              <SafeImage
                 src="/ambulance-cow.png"
                 alt="ambulance"
                 width={900}
@@ -408,7 +408,7 @@ export default function DonationPage() {
             {/* ================= LEFT IMAGE ================= */}
             <div className="relative">
 
-              <Image
+              <SafeImage
                 src="/ambulance-cow.png"
                 alt="ambulance"
                 width={900}
@@ -472,7 +472,7 @@ export default function DonationPage() {
 
       {/* IMAGE */}
       <div className="relative h-[260px] overflow-hidden">
-        <Image
+        <SafeImage
           src="/ambulance.jpg"
           alt="ambulance"
           fill
@@ -513,7 +513,7 @@ export default function DonationPage() {
 
       {/* IMAGE */}
       <div className="relative h-[260px] overflow-hidden">
-        <Image
+        <SafeImage
           src="/gau-seva.jpg"
           alt="gau seva"
           fill
@@ -554,7 +554,7 @@ export default function DonationPage() {
 
       {/* IMAGE */}
       <div className="relative h-[260px] overflow-hidden">
-        <Image
+        <SafeImage
           src="/cow-food.jpg"
           alt="cow food"
           fill

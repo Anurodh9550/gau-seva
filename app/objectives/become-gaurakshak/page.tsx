@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
@@ -33,7 +33,7 @@ export default function BecomeGaurakshakPage() {
   return (
     <main className="bg-[#f8f5ef] overflow-hidden">
       <section className="relative h-[92vh] flex items-center justify-center overflow-hidden">
-        <Image src="/gaurakshak-hero.jpg" alt="Gaurakshak" fill priority className="object-cover" />
+        <SafeImage src="/gaurakshak-hero.jpg" alt="Gaurakshak" fill priority className="object-cover" />
 
         <div className="absolute inset-0 bg-black/65"></div>
 
@@ -74,7 +74,7 @@ export default function BecomeGaurakshakPage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <Image
+            <SafeImage
               src="/gaurakshak-about.jpg"
               alt="about"
               width={700}
@@ -154,7 +154,7 @@ export default function BecomeGaurakshakPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {["/gaur1.jpg", "/gaur2.jpg", "/gaur3.jpg", "/gaur4.jpg"].map((img, index) => (
               <motion.div key={index} whileHover={{ scale: 1.05 }} className="overflow-hidden rounded-[28px]">
-                <Image
+                <SafeImage
                   src={img}
                   alt="gallery"
                   width={400}
@@ -168,7 +168,7 @@ export default function BecomeGaurakshakPage() {
       </section>
 
       <section className="relative py-28 overflow-hidden">
-        <Image src="/gaurakshak-cta.jpg" alt="cta" fill className="object-cover" />
+        <SafeImage src="/gaurakshak-cta.jpg" alt="cta" fill className="object-cover" />
 
         <div className="absolute inset-0 bg-black/70"></div>
 

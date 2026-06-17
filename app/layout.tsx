@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Providers } from "../components/Providers";
+import { SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gausevasangh.org"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default: "Rashtriya Gau Seva Sangh",
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Rashtriya Gau Seva Sangh",
-      url: "https://gausevasangh.org",
+      url: SITE_URL,
     },
   ],
 
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
   publisher: "Rashtriya Gau Seva Sangh",
 
   alternates: {
-    canonical: "https://gausevasangh.org",
+    canonical: SITE_URL,
   },
 
   robots: {
@@ -104,7 +105,7 @@ export const metadata: Metadata = {
     description:
       "Official website of Rashtriya Gau Seva Sangh dedicated to Gau Raksha, Gaushala development, cow welfare, and social service initiatives.",
 
-    url: "https://gausevasangh.org",
+    url: SITE_URL,
 
     siteName: "Rashtriya Gau Seva Sangh",
 
@@ -157,8 +158,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Rashtriya Gau Seva Sangh",
-              url: "https://gausevasangh.org",
-              logo: "https://gausevasangh.org/gulogo.png",
+              url: SITE_URL,
+              logo: `${SITE_URL}/gulogo.png`,
               sameAs: [
                 "https://facebook.com/",
                 "https://instagram.com/",

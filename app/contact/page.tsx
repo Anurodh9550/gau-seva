@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { motion } from "framer-motion";
 import type { FormEvent } from "react";
 import {
@@ -94,7 +94,7 @@ export default function ContactPage() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
 
         {/* Background */}
-        <Image
+        <SafeImage
           src="/contectus2.png"
           alt="contact"
           fill

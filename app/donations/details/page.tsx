@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLocale } from "@/components/LocaleProvider";
@@ -129,7 +129,7 @@ export default function DonationDetailsPage() {
         </div>
 
         <div className="bg-[#ead9bc]">
-          <Image src="/cow2.jpg" alt="donation" width={900} height={780} className="w-full h-[360px] md:h-[420px] object-cover" />
+          <SafeImage src="/cow2.jpg" alt="donation" width={900} height={780} className="w-full h-[360px] md:h-[420px] object-cover" />
           <div className="px-8 py-6">
             <h3 className="text-[#3f2b1a] text-5xl md:text-6xl font-extrabold leading-none">{t("don.sideDonation")}</h3>
             <p className="mt-2 text-[#3f2b1a] text-3xl md:text-4xl font-extrabold uppercase">{t("don.sideFor")}</p>

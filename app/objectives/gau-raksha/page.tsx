@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useMemo, useRef } from "react";
@@ -57,7 +57,7 @@ export default function GauRakshaMissionPage() {
     <main className="bg-[#f8f5ef] overflow-hidden">
       {/* ================= HERO SECTION ================= */}
       <section className="relative h-[90vh] overflow-hidden">
-        <Image
+        <SafeImage
           src="/bgrr.png"
           alt="Gau Raksha"
           fill
@@ -117,7 +117,7 @@ export default function GauRakshaMissionPage() {
               className="relative"
             >
               <div className="overflow-hidden rounded-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] hover:scale-105 transition duration-700 ">
-                <Image
+                <SafeImage
                   src="/cow22.png"
                   alt="About Gau Raksha"
                   width={800}
@@ -223,7 +223,7 @@ export default function GauRakshaMissionPage() {
                 }}
                 className="min-w-[300px] md:min-w-[360px] max-w-[360px] flex-shrink-0 snap-start overflow-hidden rounded-[28px] shadow-xl bg-white border border-[#efe7d8]"
               >
-                <Image
+                <SafeImage
                   src={item.image}
                   alt={item.title}
                   width={600}
@@ -243,7 +243,7 @@ export default function GauRakshaMissionPage() {
 
       {/* ================= CTA SECTION ================= */}
       <section className="relative py-24 overflow-hidden">
-        <Image src="/card4.png" alt="cta" fill className="object-cover" />
+        <SafeImage src="/card4.png" alt="cta" fill className="object-cover" />
 
         <div className="absolute inset-0 bg-black/55"></div>
 

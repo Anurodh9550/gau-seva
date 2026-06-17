@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
@@ -33,7 +33,7 @@ export default function GaushalaDevelopmentPage() {
   return (
     <main className="bg-[#f8f5ef] overflow-hidden">
       <section className="relative h-[92vh] flex items-center justify-center overflow-hidden">
-        <Image src="/devopment.jpg" alt="Gaushala" fill priority className="object-cover" />
+        <SafeImage src="/devopment.jpg" alt="Gaushala" fill priority className="object-cover" />
 
         <div className="absolute inset-0 bg-black/60"></div>
 
@@ -74,7 +74,7 @@ export default function GaushalaDevelopmentPage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <Image
+            <SafeImage
               src="/dev.jpg"
               alt="about"
               width={700}
@@ -154,7 +154,7 @@ export default function GaushalaDevelopmentPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {["/cons4.jpg", "/cons3.jpg", "/cons2.jpg", "/cons1.jpg"].map((img, index) => (
               <motion.div key={index} whileHover={{ scale: 1.05 }} className="overflow-hidden rounded-[28px]">
-                <Image
+                <SafeImage
                   src={img}
                   alt="gallery"
                   width={400}
@@ -168,7 +168,7 @@ export default function GaushalaDevelopmentPage() {
       </section>
 
       <section className="relative py-28 overflow-hidden">
-        <Image src="/dvbg.jpg" alt="cta" fill className="object-cover" />
+        <SafeImage src="/dvbg.jpg" alt="cta" fill className="object-cover" />
 
         <div className="absolute inset-0 bg-[#000]/70"></div>
 

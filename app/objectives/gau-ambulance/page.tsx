@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
@@ -32,7 +32,7 @@ export default function GauAmbulancePage() {
   return (
     <main className="bg-[#f8f6ef] overflow-hidden">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <Image
+        <SafeImage
           src="/gauan.png"
           alt="gau ambulance"
           fill
@@ -147,7 +147,7 @@ export default function GauAmbulancePage() {
                 }}
                 className="overflow-hidden rounded-[25px] shadow-xl"
               >
-                <Image
+                <SafeImage
                   src={img}
                   alt="gallery"
                   width={400}
@@ -161,7 +161,7 @@ export default function GauAmbulancePage() {
       </section>
 
       <section className="relative py-28 overflow-hidden">
-        <Image src="/cta-bg.jpg" alt="cta" fill className="object-cover" />
+        <SafeImage src="/cta-bg.jpg" alt="cta" fill className="object-cover" />
 
         <div className="absolute inset-0 bg-black/60"></div>
 

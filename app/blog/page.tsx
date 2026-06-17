@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -71,7 +71,7 @@ export default function BlogPage() {
       <section className="relative h-[65vh] flex items-center justify-center overflow-hidden">
 
         {/* Background */}
-        <Image
+        <SafeImage
           src="/blog-banner.jpg"
           alt="blog"
           fill
@@ -151,7 +151,7 @@ export default function BlogPage() {
                 {/* Image */}
                 <div className="relative overflow-hidden">
 
-                  <Image
+                  <SafeImage
                     src={blog.image}
                     alt={blog.title}
                     width={600}
@@ -212,7 +212,7 @@ export default function BlogPage() {
       <section className="relative py-24 overflow-hidden">
 
         {/* Background */}
-        <Image
+        <SafeImage
           src="/newsletter-bg.jpg"
           alt="newsletter"
           fill

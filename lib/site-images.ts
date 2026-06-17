@@ -153,7 +153,7 @@ export const images = {
   ] as const,
 } as const;
 
-/** Keep existing /public paths; only map when a migrated file exists. */
+/** Local paths are served from /public; ensure-public-images fills any missing assets at build time. */
 export function resolveImagePath(src: string): string {
   if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("data:")) {
     return src;

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -80,7 +80,7 @@ export default function DonationAmountPage() {
         </div>
 
         <div className="bg-[#ead9bc]">
-          <Image
+          <SafeImage
             src="/cow2.jpg"
             alt="donation"
             width={900}

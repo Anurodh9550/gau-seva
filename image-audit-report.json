@@ -1,0 +1,227 @@
+{
+  "generatedAt": "2026-06-17T07:11:21.251Z",
+  "totalRequired": 73,
+  "found": 0,
+  "missing": [
+    "/images/about-cta.jpg",
+    "/images/about-hero.jpg",
+    "/images/about-mission.png",
+    "/images/ambulance-1.jpg",
+    "/images/ambulance-2.jpg",
+    "/images/ambulance-3.jpg",
+    "/images/ambulance-4.jpg",
+    "/images/ambulance-card.jpg",
+    "/images/ambulance-cow.png",
+    "/images/bg-pattern.png",
+    "/images/blog-1.jpg",
+    "/images/blog-2.jpg",
+    "/images/blog-3.jpg",
+    "/images/blog-4.jpg",
+    "/images/blog-5.jpg",
+    "/images/blog-6.jpg",
+    "/images/blog-banner.jpg",
+    "/images/brush-shape.png",
+    "/images/brush.png",
+    "/images/contact-hero.png",
+    "/images/cow-2.jpg",
+    "/images/cow-22.png",
+    "/images/cow-bg.jpg",
+    "/images/cow-feeding-card.jpg",
+    "/images/cow-feeding-cta.jpg",
+    "/images/cow-feeding-hero.jpg",
+    "/images/cow-food-card.jpg",
+    "/images/cow-portrait-2.jpg",
+    "/images/cow-portrait.jpg",
+    "/images/cta-bg.jpg",
+    "/images/fallback.jpg",
+    "/images/food-item-1.jpg",
+    "/images/food-item-2.jpg",
+    "/images/food-item-3.jpg",
+    "/images/food-item-4.jpg",
+    "/images/gau-ambulance-hero.png",
+    "/images/gau-gallery-1.png",
+    "/images/gau-gallery-2.png",
+    "/images/gau-gallery-3.png",
+    "/images/gau-gallery-4.png",
+    "/images/gau-raksha-cta.png",
+    "/images/gau-raksha-hero.png",
+    "/images/gau-seva-card.jpg",
+    "/images/gaurakshak-about.jpg",
+    "/images/gaurakshak-cta.jpg",
+    "/images/gaurakshak-gallery-1.jpg",
+    "/images/gaurakshak-gallery-2.jpg",
+    "/images/gaurakshak-gallery-3.jpg",
+    "/images/gaurakshak-gallery-4.jpg",
+    "/images/gaurakshak-hero.jpg",
+    "/images/gaushala-about.jpg",
+    "/images/gaushala-cta.jpg",
+    "/images/gaushala-development-hero.jpg",
+    "/images/gaushala-gallery-1.jpg",
+    "/images/gaushala-gallery-2.jpg",
+    "/images/gaushala-gallery-3.jpg",
+    "/images/gaushala-gallery-4.jpg",
+    "/images/gu-logo.png",
+    "/images/left-hand.png",
+    "/images/logo.png",
+    "/images/news-1.jpg",
+    "/images/news-2.jpg",
+    "/images/news-3.jpg",
+    "/images/newsletter-bg.jpg",
+    "/images/pattern-bg.png",
+    "/images/post-bg.png",
+    "/images/qr-code.png",
+    "/images/right-hand.png",
+    "/images/volunteer-1.jpg",
+    "/images/volunteer-2.jpg",
+    "/images/volunteer-3.jpg",
+    "/images/volunteer-4.jpg",
+    "/images/volunteer-bg.jpg"
+  ],
+  "legacyPathsStillBroken": [
+    {
+      "legacy": "/qr-code.png",
+      "migrated": "/images/qr-code.png",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/news1.jpg",
+      "migrated": "/images/news-1.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/news2.jpg",
+      "migrated": "/images/news-2.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/news3.jpg",
+      "migrated": "/images/news-3.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/cta-bg.jpg",
+      "migrated": "/images/cta-bg.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaurakshak-hero.jpg",
+      "migrated": "/images/gaurakshak-hero.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaurakshak-about.jpg",
+      "migrated": "/images/gaurakshak-about.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaurakshak-cta.jpg",
+      "migrated": "/images/gaurakshak-cta.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaur1.jpg",
+      "migrated": "/images/gaurakshak-gallery-1.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaur2.jpg",
+      "migrated": "/images/gaurakshak-gallery-2.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaur3.jpg",
+      "migrated": "/images/gaurakshak-gallery-3.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gaur4.jpg",
+      "migrated": "/images/gaurakshak-gallery-4.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/pattern-bg.png",
+      "migrated": "/images/pattern-bg.png",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/ambulance-cow.png",
+      "migrated": "/images/ambulance-cow.png",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/ambulance.jpg",
+      "migrated": "/images/ambulance-card.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/gau-seva.jpg",
+      "migrated": "/images/gau-seva-card.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/cow-food.jpg",
+      "migrated": "/images/cow-food-card.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog1.jpg",
+      "migrated": "/images/blog-1.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog2.jpg",
+      "migrated": "/images/blog-2.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog3.jpg",
+      "migrated": "/images/blog-3.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog4.jpg",
+      "migrated": "/images/blog-4.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog5.jpg",
+      "migrated": "/images/blog-5.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog6.jpg",
+      "migrated": "/images/blog-6.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/blog-banner.jpg",
+      "migrated": "/images/blog-banner.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/newsletter-bg.jpg",
+      "migrated": "/images/newsletter-bg.jpg",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/brush.png",
+      "migrated": "/images/brush.png",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/brush-shape.png",
+      "migrated": "/images/brush-shape.png",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/left-hand.png",
+      "migrated": "/images/left-hand.png",
+      "migratedExists": false
+    },
+    {
+      "legacy": "/right-hand.png",
+      "migrated": "/images/right-hand.png",
+      "migratedExists": false
+    }
+  ]
+}
