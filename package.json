@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "images:ensure": "node scripts/ensure-public-images.mjs",
+    "images:audit": "node scripts/audit-images.mjs",
+    "prebuild": "node scripts/ensure-public-images.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { useMemo, useState } from "react";
+import SafeImage from "@/components/SafeImage";
+import { useMemo, useState, useEffect } from "react";
 import { Play } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -13,6 +13,18 @@ export default function HomePage() {
   const { t } = useLocale();
   const [active, setActive] = useState(0);
   const router = useRouter();
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const target = document.getElementById(sectionId);
@@ -77,7 +89,7 @@ export default function HomePage() {
           transition={{ duration: 2 }}
           className="absolute inset-0"
         >
-          <Image
+          <SafeImage
             src="/cow_bg1.jpg"
             alt="cow"
             fill
@@ -280,7 +292,7 @@ export default function HomePage() {
                     whileTap={{
                       scale: 0.95,
                     }}
-                    onClick={() => router.push("/objectives")}
+                    onClick={() => scrollToSection("objectives")}
                     className="bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] transition text-white px-6 py-3 rounded-full font-bold text-base shadow-[0_8px_24px_rgba(200,163,90,0.32)]"
                   >
                     Learn More →
@@ -296,8 +308,8 @@ export default function HomePage() {
 
         {/* Background Shape */}
         <div className="absolute top-0 left-0 opacity-10">
-          <Image
-            src="/brush.png"
+          <SafeImage
+            src="/bgpc.png"
             alt="shape"
             width={500}
             height={500}
@@ -342,7 +354,7 @@ export default function HomePage() {
                 <div className="pointer-events-none absolute hidden lg:block -top-3 left-10 right-10 h-3.5 bg-[var(--color-accent)] rounded-full z-20 shadow-lg"></div>
 
                 <div className="relative overflow-hidden rounded-[30px] bg-white shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
-                <Image
+                <SafeImage
                   src="/aboutbg1.png"
                   alt="about"
                   width={600}
@@ -457,7 +469,7 @@ export default function HomePage() {
             >
 
               {/* Background Image */}
-              <Image
+              <SafeImage
                 src="/volenterbg.jpg"
                 alt="volunteer"
                 width={800}
@@ -523,7 +535,7 @@ export default function HomePage() {
             >
 
               {/* Background */}
-              <Image
+              <SafeImage
                 src="/volenterbg.jpg"
                 alt="gaurakshak"
                 width={800}
@@ -588,39 +600,7 @@ export default function HomePage() {
 
         <div className="absolute bottom-8 right-14 w-56 h-56 bg-[#0d6b5c]/28 blur-[90px] rounded-full"></div>
 
-        {/* Left Hand */}
-        <motion.div
-          initial={{ opacity: 0, x: -120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="absolute bottom-0 left-0 z-10 opacity-90"
-        >
-          <Image
-            src="/left-hand.png"
-            alt="left hand"
-            width={380}
-            height={220}
-            className="object-contain w-[220px] md:w-[320px]"
-          />
-        </motion.div>
-
-        {/* Right Hand */}
-        <motion.div
-          initial={{ opacity: 0, x: 120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="absolute bottom-0 right-0 z-10 opacity-90"
-        >
-          <Image
-            src="/right-hand.png"
-            alt="right hand"
-            width={380}
-            height={220}
-            className="object-contain w-[220px] md:w-[320px]"
-          />
-        </motion.div>
+        {/* Decorative hands removed — asset files were missing (caused image 400). */}
 
         {/* Center Content */}
         <div className="relative z-20 max-w-5xl mx-auto px-6 text-center">
@@ -687,8 +667,8 @@ export default function HomePage() {
 
         {/* Brush Shape */}
         <div className="absolute top-0 right-20 opacity-10">
-          <Image
-            src="/brush-shape.png"
+          <SafeImage
+            src="/bgpc.png"
             alt="brush"
             width={500}
             height={500}
@@ -776,7 +756,7 @@ export default function HomePage() {
                 }}
                 className="relative rounded-[28px] overflow-hidden shadow-[0_22px_55px_rgba(0,0,0,0.2)]"
               >
-                <Image
+                <SafeImage
                   src="/postbg.png"
                   alt="story"
                   width={700}
@@ -929,7 +909,7 @@ export default function HomePage() {
                 <div className="relative">
 
                   <div className="overflow-hidden rounded-b-[90px]">
-                    <Image
+                    <SafeImage
                       src={item.image}
                       alt={item.name}
                       width={500}
@@ -1090,7 +1070,7 @@ export default function HomePage() {
           >
 
             {/* Image */}
-            <Image
+            <SafeImage
               src="/cow2.jpg"
               alt="impact"
               width={1000}
@@ -1148,7 +1128,7 @@ export default function HomePage() {
                 }}
                 className="relative overflow-hidden rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.15)]"
               >
-                <Image
+                <SafeImage
                   src="/coww.jpg"
                   alt="faq"
                   width={700}
@@ -1168,7 +1148,7 @@ export default function HomePage() {
                 }}
                 className="absolute bottom-2 right-6 bg-white p-2 rounded-[24px] shadow-[0_15px_40px_rgba(0,0,0,0.18)]"
               >
-                <Image
+                <SafeImage
                   src="/cowww.jpg"
                   alt="small"
                   width={250}

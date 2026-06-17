@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import {
   Phone,
@@ -60,6 +60,31 @@ export default function Header() {
     { name: "Supplier", desc: "Provide products and service support." },
     { name: "Mentor", desc: "Guide volunteers with experience." },
   ];
+
+  const languageSelect = (variant: "topBar" | "header" = "header") => (
+    <select
+      value={locale}
+      onChange={(event) => {
+        const value = event.target.value;
+        if (value === "hi" || value === "en") {
+          setLocale(value);
+        }
+      }}
+      className={
+        variant === "topBar"
+          ? "h-7 min-w-[78px] rounded-md border border-white/35 bg-white/15 px-2 text-[11px] font-semibold text-white outline-none cursor-pointer"
+          : "h-7 min-w-[78px] rounded-md border border-[var(--green-light)] bg-[var(--color-primary)] px-2 text-[11px] font-semibold text-white outline-none cursor-pointer shadow-sm"
+      }
+      aria-label="Site language"
+    >
+      <option value="en" className="bg-white text-[var(--brown)]">
+        English
+      </option>
+      <option value="hi" className="bg-white text-[var(--brown)]">
+        Hindi
+      </option>
+    </select>
+  );
 
   useEffect(() => {
     const openRegisterModal = () => {
@@ -180,26 +205,13 @@ export default function Header() {
             <span>mail: support@rastriyagauseva.com</span>
           </div>
           <div className="w-[1px] h-5 bg-white/40" />
-          <select
-            value={locale}
-            onChange={(event) => {
-              const value = event.target.value;
-              if (value === "hi" || value === "en") {
-                setLocale(value);
-              }
-            }}
-            className="bg-white text-black px-4 py-2 rounded-md outline-none text-sm font-medium"
-            aria-label="Site language"
-          >
-            <option value="en">English</option>
-            <option value="hi">Hindi</option>
-          </select>
+          {languageSelect("topBar")}
         </div>
       </div>
 
       <div className="h-[72px] md:h-[82px] bg-[var(--color-header-bg)] border-b border-gray-200 flex items-center justify-between md:justify-end px-4 md:px-10">
         <Link href="/" className="z-50 md:absolute md:left-[20px] md:top-[2px] md:-mt-7 overflow-hidden">
-          <Image
+          <SafeImage
             src="/gu2.png"
             alt="Logo"
             width={180}
@@ -209,13 +221,16 @@ export default function Header() {
           />
         </Link>
 
-        <button
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-[var(--brown)]"
-          aria-label="Toggle menu"
-          onClick={() => setMobileMenuOpen((prev) => !prev)}
-        >
-          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        <div className="md:hidden flex items-center gap-1.5 z-50">
+          {languageSelect("header")}
+          <button
+            className="inline-flex items-center justify-center rounded-md p-2 text-[var(--brown)]"
+            aria-label="Toggle menu"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+          >
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
 
         <nav className="hidden md:flex items-center gap-10 text-[18px] font-semibold text-[var(--brown)]">
           {navLinks.slice(0, 3).map((link) => (
@@ -329,6 +344,11 @@ export default function Header() {
             >
               Donate Now
             </Link>
+
+            <div className="mt-3 flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--cream-dark)]/60 p-2.5">
+              <span className="text-xs font-semibold text-[var(--brown)]">Language</span>
+              {languageSelect("header")}
+            </div>
 
             <div className="mt-3 rounded-lg border border-gray-200 bg-white/60 p-3 text-sm">
               <div className="flex items-center gap-2">

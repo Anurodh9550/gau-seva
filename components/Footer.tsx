@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -8,7 +8,7 @@ export default function Footer() {
   const quickLinks = [
     { label: "About Us", href: "/About" },
     { label: "Our News", href: "/blog" },
-    { label: "Our Campaign", href: "/objectives" },
+    { label: "Our Campaign", href: "/#objectives" },
     { label: "Contact Us", href: "/contact" },
   ];
 
@@ -35,7 +35,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className=" overflow-hidden rounded-full   ">
-              <Image src="/gu2.png" alt="logo" width={220} height={220} className="object-cover" />
+              <SafeImage src="/gu2.png" alt="logo" width={220} height={220} className="object-cover" />
             </div>
             <p className="-mt-10 text-sm leading-6 text-white/70">
               Our secure online donation platform allows you to make contributions quickly and

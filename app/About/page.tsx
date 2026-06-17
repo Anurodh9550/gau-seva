@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="relative h-[360px] overflow-hidden">
 
         {/* Background Image */}
-        <Image
+        <SafeImage
           src="/aboutbg.jpg"
           alt="about"
           fill
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
               <div className="overflow-hidden rounded-[28px] border-[5px] border-[#f4a300] shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
 
-                <Image
+                <SafeImage
                   src="/cow2.jpg"
                   alt="cow"
                   width={800}
@@ -145,7 +145,7 @@ export default function AboutPage() {
 
             <div className="overflow-hidden rounded-[8px] border-2 border-[#0056b8] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
 
-              <Image
+              <SafeImage
                 src="/aboutbg1.png"
                 alt="mission"
                 width={900}
@@ -277,7 +277,7 @@ export default function AboutPage() {
 
                 {/* Image */}
                 <div className="relative overflow-hidden">
-                  <Image
+                  <SafeImage
                     src={item.image}
                     alt="news"
                     width={700}
@@ -342,7 +342,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden py-20">
 
         {/* Background Image */}
-        <Image
+        <SafeImage
           src="/about22.jpg"
           alt="background"
           fill
@@ -425,8 +425,8 @@ export default function AboutPage() {
               <div className="relative bg-white/10 backdrop-blur-md border-[3px] border-white rounded-[24px] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
 
                 {/* QR Image */}
-                <Image
-                  src="/qr-code.png"
+                <SafeImage
+                  src="/gu2.png"
                   alt="qr"
                   width={380}
                   height={520}
